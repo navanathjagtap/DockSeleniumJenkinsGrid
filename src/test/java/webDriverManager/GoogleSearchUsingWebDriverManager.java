@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class GoogleSearchUsingWebDriverManager {
 
 	public static void main(String[] args) {
-		System.out.println("-----for firefox change the org.seleniumhq.selenium to 4.15.0 for chrome-------");
+		System.out.println("-----for chrome change the org.seleniumhq.selenium to 4.15.0 for chrome-------");
 		testGoogleSearch("chrome");
 //		System.out.println("-----for firefox change the org.seleniumhq.selenium to 4.1.0 for firefox-------");
 //        testGoogleSearch("firefox");
