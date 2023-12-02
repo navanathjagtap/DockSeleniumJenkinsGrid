@@ -42,7 +42,7 @@
 
 
 		<!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java  4.1.0 for firefox -->
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java  4.1.0 for firefox  and for chrome 4.15.0-->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
