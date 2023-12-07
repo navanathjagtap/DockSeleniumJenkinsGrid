@@ -15,11 +15,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>3.0.0</version>
-				</plugin>
-				<plugin>
-					<groupId>org.apache.maven.plugins</groupId>
-					<artifactId>maven-surefire-plugin</artifactId>
-					<version>3.0.0</version>
 					<configuration>
 						<suiteXmlFiles>
 							<suiteXmlFile>testng.xml</suiteXmlFile>
@@ -42,7 +37,8 @@
 
 
 		<!--
-		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java  4.1.0 for firefox  and for chrome 4.15.0-->
+		https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java  4.1.0
+		for firefox  and for chrome 4.15.0-->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>

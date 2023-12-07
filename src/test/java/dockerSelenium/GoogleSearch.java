@@ -33,6 +33,10 @@ public class GoogleSearch {
 			cap.setBrowserName("firefox");
 			cap.setPlatform(Platform.LINUX);
 			driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
+		}else if (browser.contains("edge")) {
+		    cap.setBrowserName("MicrosoftEdge");
+		    cap.setPlatform(Platform.LINUX);
+		    driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), cap);
 		} else {
 			throw new IllegalArgumentException("Invalid browser name: " + browser);
 		}

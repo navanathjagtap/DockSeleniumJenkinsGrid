@@ -1,14 +1,44 @@
-# DockerSelenium
+# Docker Compose Configuration for Selenium Standalone Chrome, Firefox and edge
+version: '3.8'
+
+services:
+
+   # Selenium Standalone Chrome
+   chrome:
+      image: selenium/standalone-chrome:latest
+      hostname: chrome
+      privileged: true
+      shm_size: 2g
+      ports:
+      - 4444:4444
+      restart: always
+      
+   # Selenium Standalone Firefox   
+   firefox:
+      image: selenium/standalone-firefox:latest
+      hostname: firefox
+      privileged: true
+      shm_size: 2g
+      ports:
+      - 4441:4444
+      restart: always
+    
+   # Selenium Standalone edge -- No need also slow too much
+   edge:
+      image: selenium/standalone-edge:latest
+      hostname: edge
+      privileged: true
+      shm_size: 2g
+      ports:
+      - 4442:4444
+      restart: always
+   
+
+
 # ------------------
-# Orphaned comments:1
+# Orphaned comments:
 # To run the docker-compose-standAlone.yml file, use the following command:
 # docker-compose -f docker-compose-standAlone.yml up -d
-
-# To stop the docker-compose-standAlone.yml file use the following command:
-# docker-compose -f docker-compose-standAlone.yml down
-
-# if the file name is same then run 
-# docker-compose up -d
 
 # Access the Selenium StandAlone browser UI at http://localhost:4444/ui
 # Start services with the YAML file: docker-compose up -d
@@ -33,9 +63,3 @@
 
 # To run tests with Firefox using Maven:
 # mvn test -Dbrowser=firefox
-
-# To run tests with Chrome using Maven:
-# mvn test
-
-# To run tests with edge using Maven:
-# mvn test -Dbrowser=edge

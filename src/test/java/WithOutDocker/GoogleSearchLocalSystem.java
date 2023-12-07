@@ -1,10 +1,15 @@
 package WithOutDocker;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+
+import java.net.URL;
+
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 
@@ -30,15 +35,13 @@ public class GoogleSearchLocalSystem {
 			System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver.exe");
 			FirefoxOptions firefoxOptions = new FirefoxOptions();
 			driver = new FirefoxDriver(firefoxOptions);
+		} else if (browser.contains("edge")) {
+			System.setProperty("webdriver.edge.driver", "src/test/resources/drivers/msedgedriver.exe");
+			driver = new EdgeDriver();
 		} else {
-			try {
-				System.setProperty("webdriver.edge.driver", "src/test/resources/drivers/msedgedriver.exe");
-				driver = new EdgeDriver();
-			} catch (Exception e) {
-				throw new IllegalArgumentException("Invalid browser name: " + browser);
-			}
-
+			throw new IllegalArgumentException("Invalid browser name: " + browser);
 		}
+
 		try {
 			System.out.println("------stared test case---------");
 			driver.get("https://www.google.com");
