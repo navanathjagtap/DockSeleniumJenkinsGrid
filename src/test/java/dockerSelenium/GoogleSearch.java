@@ -85,9 +85,11 @@ public class GoogleSearch {
 
 	}
 
-	/*
-	 * @Test(priority = 3) public void stopDockerGrid() throws Exception {
-	 * Runtime.getRuntime().exec("cmd /c start stop_dockerGrid.bat");
-	 * Thread.sleep(10000); Runtime.getRuntime().exec("taskkill /f /im cmd.exe"); }
-	 */
+	@Test(priority = 3)
+	public void stopDockerGrid() throws Exception {
+		Runtime.getRuntime().exec("cmd /c start stop_dockerGrid.bat");
+		Thread.sleep(10000);
+//		Runtime.getRuntime().exec("taskkill /f /im cmd.exe");
+	}
+
 }

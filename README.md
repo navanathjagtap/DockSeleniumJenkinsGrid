@@ -45,6 +45,9 @@
 # Integarte docker with local system
 
 # Run the command java -jar jenkins. war
+# run  : http://localhost:8080
+# username & password jenkins: admin & admin
+# git: Okta@123
 # Run docker 
 # jenkin configration with windows for free style
 # cd C:\DockerSelenium\DockerSelenium
