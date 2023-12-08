@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Dockerr">
-
 	<test thread-count="5" name="Test">
 		<classes>
 			<class name="dockerSelenium.GoogleSearch" />
-			<!--below file is for java test-->
+			<!--When we have to use test anotation like before test that time use below line code-->
+			<!--<class name="dockerSelenium.Setup_DockerGrid" />-->
+			<!--Below file is for Java test -->
 			<!--<class name="dockerSelenium.GoogleSearchLocalSystem"/>-->
 		</classes>
 	</test> <!--
