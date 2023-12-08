@@ -39,3 +39,17 @@
 
 # To run tests with edge using Maven:
 # mvn test -Dbrowser=edge
+
+
+
+# Integarte docker with local system
+
+# Run the command java -jar jenkins. war
+# Run docker 
+# jenkin configration with windows for free style
+# cd C:\DockerSelenium\DockerSelenium
+# mvn clean install
+
+# Integarte docker with github
+# mvn clean install
+
